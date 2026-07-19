@@ -1,0 +1,21 @@
+# autenntication
+
+uv run logfire auth
+
+
+# True data integration 
+python -m app.ingestion.processor DATA/true_data true
+
+# noisy dat integration
+python -m app.ingestion.processor DATA/noisy_data noisy
+
+# copy paste in web
+https://agenticai-session.notion.site/Data-Ingestion-Commands-3925a934f2cf803b802ed0b6483257f4
+
+# run the app
+
+## for backend
+uv run uvicorn app.main:app --reload --port 8000
+
+## for frontend
+streamlit run ui/app.py
